@@ -33,9 +33,9 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#what" class="active">Why Karai?</a></li>
-                    <li><a href="#first">Get Started</a></li>
-                    <li><a href="#first">Development</a></li>
-                    <li><a href="#second">Contact</a></li>
+                    <li><a href="#getstarted">Get Started</a></li>
+                    <li><a href="#development">Development</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -57,10 +57,13 @@
                             </h3>
                             <p>
                                 Karai is a
-                                <a href="#">Directed Acyclic Graph</a>.
-                                <br />Linear blockchains are slow, unscalable,
-                                and conventional smart contracts are missing the
-                                point. Karai is fast and infinitely scalable.
+                                <a
+                                    href="https://hazelcast.com/glossary/directed-acyclic-graph/"
+                                    >Directed Acyclic Graph</a
+                                >. <br />Linear blockchains are slow,
+                                unscalable, and conventional smart contracts are
+                                missing the point. Karai is fast and infinitely
+                                scalable.
                             </p>
                         </li>
                         <li>
@@ -92,7 +95,9 @@
                     <footer class="major">
                         <ul class="actions special">
                             <li>
-                                <a href="generic.html" class="button"
+                                <a
+                                    href="https://github.com/turtlecoin/go-karai/blob/master/docs/WHITEPAPER.md"
+                                    class="button"
                                     ><strong
                                         ><span
                                             class="icon style3 solid fa-download"
@@ -105,7 +110,7 @@
                         </ul>
                     </footer>
                 </section>
-                <section class="main">
+                <section class="main" id="getstarted">
                     <div class="spotlight">
                         <div class="content">
                             <header class="major">
@@ -115,60 +120,46 @@
                                     ></span>
                                     <strong> Getting Started</strong>
                                 </h2>
+                                <p>
+                                    We're developing libs as fast as we can,
+                                    here are the interfaces we have available so
+                                    far. If you'd like to write a Karai
+                                    interface for your favorite language, you
+                                    can
+                                    <a
+                                        href="https://github.com/turtlecoin/go-karai"
+                                        >contribute to our project on Github</a
+                                    >
+                                </p>
                             </header>
-                            <p>
-                                We're developing libs as fast as we can, here
-                                are the interfaces we have available so far. If
-                                you'd like to write a Karai interface for your
-                                favorite language, you can
-                                <a href="#"
-                                    >contribute to our project on Github</a
-                                >
-                            </p>
+
                             <ul class="actions">
                                 <li>
-                                    <a href="generic.html" class="button"
-                                        ><strong
-                                            ><span
-                                                class="icon brands fa-node-js"
-                                            ></span>
-                                            NodeJS</strong
-                                        ></a
+                                    <a
+                                        href="https://github.com/karai-project/libkarai-js"
+                                        class="button disabled"
+                                        ><strong> NodeJS</strong></a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="button disabled"
+                                        ><strong> Python</strong></a
                                     >
                                 </li>
                                 <li>
                                     <a
-                                        href="generic.html"
+                                        href="https://github.com/karai-project/libkarai-go"
                                         class="button disabled"
-                                        ><strong
-                                            ><span
-                                                class="icon brands fa-python"
-                                            ></span>
-                                            Python</strong
-                                        ></a
+                                        ><strong> Golang</strong></a
                                     >
                                 </li>
                                 <li>
-                                    <a href="generic.html" class="button"
-                                        ><strong
-                                            ><span
-                                                class="icon brands fa-google"
-                                            ></span>
-                                            Golang</strong
-                                        ></a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="generic.html"
-                                        class="button disabled"
+                                    <a href="#" class="button disabled"
                                         ><strong>C++</strong></a
                                     >
                                 </li>
                                 <li>
-                                    <a
-                                        href="generic.html"
-                                        class="button disabled"
+                                    <a href="#" class="button disabled"
                                         ><strong>Rust</strong></a
                                     >
                                 </li>
@@ -178,7 +169,7 @@
                 </section>
 
                 <!-- Get Started -->
-                <section class="main special">
+                <section class="main special" id="development">
                     <header class="major">
                         <h2>Join Karai Development</h2>
                         <p>
@@ -193,7 +184,10 @@
                     <footer class="major">
                         <ul class="actions special">
                             <li>
-                                <a href="generic.html" class="button primary"
+                                <a
+                                    href="http://chat.turtlecoin.lol"
+                                    target="_blank"
+                                    class="button primary"
                                     ><span
                                         class="icon brands solid fa-discord"
                                     ></span>
@@ -207,17 +201,17 @@
 
             <!-- Footer -->
             <footer id="footer">
-                <section>
+                <section id="contact">
                     <h2>Contact Us</h2>
                     <p>
                         We're mainly reachable through Discord. Join the chat
                         and say hello, or if you're old fashioned, send us an
                         email at
-                        <a href="mailto:hello@karai.io">hello@karai.io</a>.
+                        <a href="mailto:rock@karai.io">rock@karai.io</a>.
                     </p>
                     <ul class="actions">
                         <li>
-                            <a href="generic.html" class="button"
+                            <a href="http://chat.turtlecoin.lol" class="button"
                                 ><span
                                     class="icon brands solid fa-discord"
                                 ></span>
@@ -231,19 +225,25 @@
 
                     <ul class="icons">
                         <li>
-                            <a href="#" class="icon brands fa-github alt"
-                                ><span class="label">GitHub</span></a
-                            >
+                            <a
+                                href="https://github.com/turtlecoin/go-karai"
+                                class="icon brands fa-github alt"
+                                ><span class="label"></span
+                            ></a>
                         </li>
                         <li>
-                            <a href="#" class="icon brands fa-twitter alt"
-                                ><span class="label">Twitter</span></a
-                            >
+                            <a
+                                href="https://twitter.com/karai_io"
+                                class="icon brands fa-twitter alt"
+                                ><span class="label"></span
+                            ></a>
                         </li>
                         <li>
-                            <a href="#" class="icon brands fa-discord alt"
-                                ><span class="label">Instagram</span></a
-                            >
+                            <a
+                                href="http://chat.turtlecoin.lol"
+                                class="icon brands fa-discord alt"
+                                ><span class="label"></span
+                            ></a>
                         </li>
                     </ul>
                 </section>
