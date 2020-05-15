@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>karai:dev</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col content-center">
+                <div class="row">
+                    <div class="col content-social">
+                        <span class="content-back float-left"><a href="../index.html"><< back</a></span>
+                        <span class="content-social-gh float-right"><a href="https://github.com/karai">GH</a></span>
+                        <span class="content-social-tw float-right"><a href="https://twitter.com/karai_io">TW</a></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col content-header">karai development
+                        <hr /><img class="img-fluid" src="../img/server.gif" /></div>
+
+                </div>
+                <div class="row">
+                    <div class="col content-category">Designing The Channel Connection Process</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>As we kick off this dev blog, it seemed right to get started with the most basic of functions with karai: how to join a channel. It’s mostly for my benefit to work it all out as I type out the details, but it seemed like something
+                            that would also make a good deep dive article too. Hope you enjoy :)</p>
+
+                        <p>Ask any programmer how to make a peanut butter & jelly sandwich and odds are you’ll get a distinctly different answer than most other professions. A popular story from academic lore is the one about a CS professor and his first
+                            year students trying to explain in terms a computer would understand how to make a peanut butter jelly sandwich. Inevitably a student would say “first you put the peanut butter on the bread” and the professor standing behind
+                            the student would place an unopened jar of peanut butter on top of a now flattened loaf of bread, while the rest of the class tried to keep a straight face.</p>
+
+                        <p>At the first impression, joining a karai transaction channel seems easy, just type in a ktx address and go. Implementing that can be another story, so this part of the process is very important.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col content-category">Starting Simple</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>The simplest goal we have here is describing from a technical perspective how to join a karai transaction channel. Sure, there are distance objectives like PKI using TRTL crypto, IPv6, QUIC, and others that we’d like to implement,
+                            but to keep things moving, the basic requirement is just to connect and complete the handshake process, joining us to the channel. We can add the fancy bells and whistles next.</p>
+                        <p>Using the most basic design, connecting to a transaction channel only requires a few things: a publicly reachable coordinator to start/run the channel, a way to communicate, and a way to advertise the coordinator’s presence. From
+                            there, you’re off to the races, sending transaction events.</p>
+                        <p>Let’s break down the process using a document I typed up last week and posted to the <a href="https://github.com/karai/meta" target="_blank" rel="noopener">karai meta forum</a>.</p>
+                        <p><a href="https://raw.githubusercontent.com/karai/meta/master/docs/p2p/handshake.md" target="_blank" rel="noopener">karai channel handshake process</a></p>
+                        <p>It’s not much to look at but it’s the basic flow of what we’re trying to accomplish. I’ll post the meat and potatoes of it here.</p>
+                        <ol>
+                            <li>user finds ktx address…</li>
+                            <li>user uses <code>connect-channel &lt;address&gt;</code> format in karai client</li>
+                            <li>user’s karai instance sends a GET request to the /version endpoint of the coordinator first. (the logic behind this is if we can’t talk anyway, we should end the convo as soon as possible)<br> a. if coord version query fails
+                                to satisfy version required, disconnect, record ktx address and version info<br> b. if coord version query passes the client’s requirements, the user sends their own version in a client-header to initiate handshake process</li>
+                            <li>if any authentication of a user in a private channel is required this is where someone would implement that.</li>
+                            <li>the coordinator responds to the handshake request with the most current milestone tx transaction containing the current the governance parameters of the channel</li>
+                            <li>user responds with ACK as a standard transaction in the channel announcing the completion of the handshake process</li>
+                            <li>assuming the ACK is accepted, the coordinator broadcasts the join TX and the process is done.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col content-category">Examining The Steps In Detail</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Even the steps we just listed have details that we’re not explaining. Let’s see if we can elaborate some on some of the points.</p>
+                        <strong>1. User Finds KTX Address</strong>
+                        <p>The user can be a person, but it’s most likely that a user will be interacting with an <em>application</em> that then uses karai in the backend without the user knowing. Regardless of machine or man, somehow the client must find
+                            a coordinator to talk to so it can connect a channel.</p>
+                        <p>On the TurtleCoin network, <a href="http://browse.karai.io" target="_blank" rel="noopener">browsers</a> have been made to scan for the existence of karai pointers that have been published in the <code>tx_extra</code> field. By
+                            providing one of these ktx addresses to the karai client, we should be able to start the handshake process.</p>
+                        <strong>2. User Uses <code>connect-channel &lt;address&gt;</code> In Karai Client</strong>
+                        <p>Natively, karai wants to generate what we call a ktx pointer to tie itself to the outside world. These pointers can be stored on any blockchain to link a channel to any network. This address is a hex encoded byte sequence that
+                            translates to <code>ktx(ip.ip.ip.ip:port)</code> where <code>ktx()</code> is the prefix and suffix, and <code>ip.ip.ip.ip:port</code> represents an ip4 address string. The IP address corresponds to a channel coordinator which
+                            is the first point of entry for joining a karai transaction channel.</p>
+                        <p>The title for this step is probably incorrect, or incomplete at best because it doesnt seem like the interface will always be manually invoking the command to connect to a client. What if a program is connecting on the user’s behalf?
+                            Regardless, the client, whether that be a person or program, needs to take that KTX address and deconstruct it to an address it understands.</p>
+                        <strong>3. Karai Client Sends GET Request To KTX /version Endpoint</strong>
+                        <p>The coordinator as well as the client both run the same software, just in a different configuration. As a coordinator, running the karai client software with the <code>-coord</code> flag exposes a REST API which provides a few
+                            endpoints that provide various interactions.</p>
+                        <p>In this case, we’re using the <code>/version</code> endpoint to understand first if we can even speak to this channel. If the coordinator is running a version you don’t support, we should cut the connection as soon as possible
+                            because there’s no point in us talking.</p>
+                        <p>If the coordinator doesn’t answer at all, we might have the wrong address or maybe something went wrong and we should stop sending data.</p>
+                        <p>Assuming we receive a version we can communicate with, we respond with our own version for the coordinator to make the same decision about speaking to us. This response happens in the form of our own version plus a ‘client-header’
+                            which contains similar info to the way a browser or application would communicate a ‘user-agent’ to a web-server so that the connection can be tailored to that client’s experience.</p>
+                        <strong>4. Optional User Authentication</strong>
+                        <p>Authentication is something that will likely be implemented the not-as-simple way the first time it appears in a channel. The reason being, even a simple form of sensible and secure DIY authentication for users joining a channel
+                            would be 90% of the work it would be to just implement proper PKI using certs generated with TRTL crypto.</p>
+                        <p>Preliminary implementations of connecting to karai channels most likely will not include authentication, simple or otherwise.</p>
+                        <strong>5. Coordinator Responds To Handshake With Current Milestone</strong>
+                        <p>Now that we’ve determined that we speak the same language as the coordinator, and we’ve told the coordinator what type of client we are, we need to know what the current governance situation is like on the channel. The channel
+                            coordinator uses milestone transactions to convey the way the channel is run, how often transactions are constructed into finalized subgraphs, and other variables. We want to pull in this data so we know how our transactions
+                            will be treated once received.
+                        </p>
+                        <p>If you’d like to know more about milestone transactions, <a href="https://github.com/turtlecoin/go-karai/wiki/Milestone-Tx-Characteristics" target="_blank" rel="noopener">they’re explained in detail in the wiki.</a></p>
+                        <strong>6. User ACKs By Sending TX Announcing Presence To Channel</strong>
+                        <p>Assuming that everything received in the most current milestone transaction jived with the way we want to operate transaction-wise, we can consumate the process by sending back an ACK.</p>
+                        <p>The acknowledgement in this case is a transaction containing the hash we derive from the milestone data to convey to the coordinator that we received an untampered copy of the latest channel rules, and confirm that data in the
+                            least amount of data required. This transaction is a type 4 (standard) transaction carrying the hash of the most recent channel milestone, and the client-header data.</p>
+                        <strong>7. The Coordinator Announces The Join</strong>
+                        <p>If the coordinator accepts this ACK and everything still checks out, the coordinator will relay the ACK previously received along with a cryptographic signature acknowledging and certifying that this client providing this info
+                            is now joining the channel. This event is broadcast as a type 5 transaction, which designates what a join is to a channel. Type 5 join transactions follow directly beneath a milestone and do not connect to any wave tips (subgraph
+                            leaders).
+                        </p>
+                        <p>This acknowledgement of the client joining the channel is used as a reference point in the client software sync process so that the client in search of their own data can limit the amount of legacy data needing to be synced.</p>
+                        <strong>In Summary</strong>
+                        <p>We have probably at this point explained the process in <em>enough</em> detail to pass the challenge, but we’re still omitting details like how the data is structured in transit (JSON) and how we’ll create that transit (TCP initially).</p>
+                        <p>Maybe soon we’ll do a followup as more of this is built to fill in those details from yet even more fine detail.</p>
+                        <p>Thanks for reading, hope this interests you. If you have comments or questions, please post them here: <a href="https://github.com/karai/meta/issues/3" target="_blank" rel="noopener">Comments: Designing The Channel Connection Process</a></p>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
