@@ -194,13 +194,13 @@ html {
 body {
     background-color: #935d8c;
     background-image: url("images/overlay.png"),
-        -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+        -moz-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
     background-image: url("images/overlay.png"),
-        -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+        -webkit-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
     background-image: url("images/overlay.png"),
-        -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+        -ms-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
     background-image: url("images/overlay.png"),
-        linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+        linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
 }
 
 body.is-preload *,
@@ -219,7 +219,6 @@ body.is-preload *:after {
 /* Type */
 
 body {
-    background-color: #935d8c;
     color: rgba(255, 255, 255, 0.65);
 }
 
@@ -2413,7 +2412,7 @@ input[type="radio"]:focus + label:before {
 }
 
 .icon.style3 {
-    color: #a89cc8;
+    color: #87ba6b;
 }
 
 .icon.style4 {
@@ -3523,7 +3522,7 @@ body.is-preload #header.alt .logo {
 #main input[type="button"].primary,
 #main button.primary,
 #main .button.primary {
-    background-color: #8cc9f0;
+    background-color: #87ba6b;
     color: #ffffff !important;
     box-shadow: none;
 }
@@ -3533,7 +3532,7 @@ body.is-preload #header.alt .logo {
 #main input[type="button"].primary:hover,
 #main button.primary:hover,
 #main .button.primary:hover {
-    background-color: #9acff2;
+    background-color: #44ae82;
 }
 
 #main input[type="submit"].primary:active,
@@ -3541,7 +3540,7 @@ body.is-preload #header.alt .logo {
 #main input[type="button"].primary:active,
 #main button.primary:active,
 #main .button.primary:active {
-    background-color: #7ec3ee;
+    background-color: #44ae82;
 }
 
 #main input[type="submit"].primary.icon:before,
@@ -3658,10 +3657,10 @@ body.is-preload #header.alt .logo {
 
 #main header.major h2:after {
     background-color: #dddddd;
-    background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-    background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-    background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+    background-image: -moz-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
+    background-image: -webkit-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
+    background-image: -ms-linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
+    background-image: linear-gradient(45deg, #2d836d 20%, #49c085 60%, #d0e59d);
 }
 
 #main table tbody tr {
