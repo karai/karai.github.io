@@ -3222,7 +3222,7 @@ table.alt tbody tr td {
 #header.alt .logo img {
     display: block;
     margin: 0 auto;
-    max-width: 75%;
+    max-width: 96px;
 }
 
 @media screen and (max-width: 1280px) {
