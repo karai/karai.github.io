@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<title>Karai Is Born</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://hackmd.io/favicon.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="https://hackmd.io/apple-touch-icon.png"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+			integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css"
+			integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css"
+			integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css"
+			integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU="
+			crossorigin="anonymous"
+		/>
+		<style>
+			@charset "UTF-8";
+			@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);
+			.hljs {
+				display: block;
+				background: #fff;
+				padding: 0.5em;
+				color: #333;
+				overflow-x: auto;
+			}
+			.hljs-comment,
+			.hljs-meta {
+				color: #969896;
+			}
+			.hljs-emphasis,
+			.hljs-quote,
+			.hljs-string,
+			.hljs-strong,
+			.hljs-template-variable,
+			.hljs-variable {
+				color: #df5000;
+			}
+			.hljs-keyword,
+			.hljs-selector-tag,
+			.hljs-type {
+				color: #a71d5d;
+			}
+			.hljs-attribute,
+			.hljs-bullet,
+			.hljs-literal,
+			.hljs-number,
+			.hljs-symbol {
+				color: #0086b3;
+			}
+			.hljs-built_in,
+			.hljs-builtin-name {
+				color: #005cc5;
+			}
+			.hljs-name,
+			.hljs-section {
+				color: #63a35c;
+			}
+			.hljs-tag {
+				color: #333;
+			}
+			.hljs-attr,
+			.hljs-selector-attr,
+			.hljs-selector-class,
+			.hljs-selector-id,
+			.hljs-selector-pseudo,
+			.hljs-title {
+				color: #795da3;
+			}
+			.hljs-addition {
+				color: #55a532;
+				background-color: #eaffea;
+			}
+			.hljs-deletion {
+				color: #bd2c00;
+				background-color: #ffecec;
+			}
+			.hljs-link {
+				text-decoration: underline;
+			}
+			.markdown-body {
+				font-size: 16px;
+				line-height: 1.5;
+				word-wrap: break-word;
+			}
+			.markdown-body:after,
+			.markdown-body:before {
+				display: table;
+				content: "";
+			}
+			.markdown-body:after {
+				clear: both;
+			}
+			.markdown-body > :first-child {
+				margin-top: 0 !important;
+			}
+			.markdown-body > :last-child {
+				margin-bottom: 0 !important;
+			}
+			.markdown-body a:not([href]) {
+				color: inherit;
+				text-decoration: none;
+			}
+			.markdown-body .absent {
+				color: #c00;
+			}
+			.markdown-body .anchor {
+				float: left;
+				padding-right: 4px;
+				margin-left: -20px;
+				line-height: 1;
+			}
+			.markdown-body .anchor:focus {
+				outline: none;
+			}
+			.markdown-body blockquote,
+			.markdown-body dl,
+			.markdown-body ol,
+			.markdown-body p,
+			.markdown-body pre,
+			.markdown-body table,
+			.markdown-body ul {
+				margin-top: 0;
+				margin-bottom: 16px;
+			}
+			.markdown-body hr {
+				height: 0.25em;
+				padding: 0;
+				margin: 24px 0;
+				background-color: #e7e7e7;
+				border: 0;
+			}
+			.markdown-body blockquote {
+				font-size: 16px;
+				padding: 0 1em;
+				color: #777;
+				border-left: 0.25em solid #ddd;
+			}
+			.markdown-body blockquote > :first-child {
+				margin-top: 0;
+			}
+			.markdown-body blockquote > :last-child {
+				margin-bottom: 0;
+			}
+			.markdown-body kbd,
+			.popover kbd {
+				display: inline-block;
+				padding: 3px 5px;
+				font-size: 11px;
+				line-height: 10px;
+				color: #555;
+				vertical-align: middle;
+				background-color: #fcfcfc;
+				border: 1px solid #ccc;
+				border-bottom-color: #bbb;
+				border-radius: 3px;
+				box-shadow: inset 0 -1px 0 #bbb;
+			}
+			.markdown-body .loweralpha {
+				list-style-type: lower-alpha;
+			}
+			.markdown-body h1,
+			.markdown-body h2,
+			.markdown-body h3,
+			.markdown-body h4,
+			.markdown-body h5,
+			.markdown-body h6 {
+				margin-top: 24px;
+				margin-bottom: 16px;
+				font-weight: 600;
+				line-height: 1.25;
+			}
+			.markdown-body h1 .octicon-link,
+			.markdown-body h2 .octicon-link,
+			.markdown-body h3 .octicon-link,
+			.markdown-body h4 .octicon-link,
+			.markdown-body h5 .octicon-link,
+			.markdown-body h6 .octicon-link {
+				color: #000;
+				vertical-align: middle;
+				visibility: hidden;
+			}
+			.markdown-body h1:hover .anchor,
+			.markdown-body h2:hover .anchor,
+			.markdown-body h3:hover .anchor,
+			.markdown-body h4:hover .anchor,
+			.markdown-body h5:hover .anchor,
+			.markdown-body h6:hover .anchor {
+				text-decoration: none;
+			}
+			.markdown-body h1:hover .anchor .octicon-link,
+			.markdown-body h2:hover .anchor .octicon-link,
+			.markdown-body h3:hover .anchor .octicon-link,
+			.markdown-body h4:hover .anchor .octicon-link,
+			.markdown-body h5:hover .anchor .octicon-link,
+			.markdown-body h6:hover .anchor .octicon-link {
+				visibility: visible;
+			}
+			.markdown-body h1 code,
+			.markdown-body h1 tt,
+			.markdown-body h2 code,
+			.markdown-body h2 tt,
+			.markdown-body h3 code,
+			.markdown-body h3 tt,
+			.markdown-body h4 code,
+			.markdown-body h4 tt,
+			.markdown-body h5 code,
+			.markdown-body h5 tt,
+			.markdown-body h6 code,
+			.markdown-body h6 tt {
+				font-size: inherit;
+			}
+			.markdown-body h1 {
+				font-size: 2em;
+			}
+			.markdown-body h1,
+			.markdown-body h2 {
+				padding-bottom: 0.3em;
+				border-bottom: 1px solid #eee;
+			}
+			.markdown-body h2 {
+				font-size: 1.5em;
+			}
+			.markdown-body h3 {
+				font-size: 1.25em;
+			}
+			.markdown-body h4 {
+				font-size: 1em;
+			}
+			.markdown-body h5 {
+				font-size: 0.875em;
+			}
+			.markdown-body h6 {
+				font-size: 0.85em;
+				color: #777;
+			}
+			.markdown-body ol,
+			.markdown-body ul {
+				padding-left: 2em;
+			}
+			.markdown-body ol.no-list,
+			.markdown-body ul.no-list {
+				padding: 0;
+				list-style-type: none;
+			}
+			.markdown-body ol ol,
+			.markdown-body ol ul,
+			.markdown-body ul ol,
+			.markdown-body ul ul {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			.markdown-body li > p {
+				margin-top: 16px;
+			}
+			.markdown-body li + li {
+				padding-top: 0.25em;
+			}
+			.markdown-body dl {
+				padding: 0;
+			}
+			.markdown-body dl dt {
+				padding: 0;
+				margin-top: 16px;
+				font-size: 1em;
+				font-style: italic;
+				font-weight: 700;
+			}
+			.markdown-body dl dd {
+				padding: 0 16px;
+				margin-bottom: 16px;
+			}
+			.markdown-body table {
+				display: block;
+				width: 100%;
+				overflow: auto;
+				word-break: normal;
+				word-break: keep-all;
+			}
+			.markdown-body table th {
+				font-weight: 700;
+			}
+			.markdown-body table td,
+			.markdown-body table th {
+				padding: 6px 13px;
+				border: 1px solid #ddd;
+			}
+			.markdown-body table tr {
+				background-color: #fff;
+				border-top: 1px solid #ccc;
+			}
+			.markdown-body table tr:nth-child(2n) {
+				background-color: #f8f8f8;
+			}
+			.markdown-body img {
+				max-width: 100%;
+				box-sizing: content-box;
+				background-color: #fff;
+			}
+			.markdown-body img[align="right"] {
+				padding-left: 20px;
+			}
+			.markdown-body img[align="left"] {
+				padding-right: 20px;
+			}
+			.markdown-body .emoji {
+				max-width: none;
+				vertical-align: text-top;
+				background-color: transparent;
+			}
+			.markdown-body span.frame {
+				display: block;
+				overflow: hidden;
+			}
+			.markdown-body span.frame > span {
+				display: block;
+				float: left;
+				width: auto;
+				padding: 7px;
+				margin: 13px 0 0;
+				overflow: hidden;
+				border: 1px solid #ddd;
+			}
+			.markdown-body span.frame span img {
+				display: block;
+				float: left;
+			}
+			.markdown-body span.frame span span {
+				display: block;
+				padding: 5px 0 0;
+				clear: both;
+				color: #333;
+			}
+			.markdown-body span.align-center {
+				display: block;
+				overflow: hidden;
+				clear: both;
+			}
+			.markdown-body span.align-center > span {
+				display: block;
+				margin: 13px auto 0;
+				overflow: hidden;
+				text-align: center;
+			}
+			.markdown-body span.align-center span img {
+				margin: 0 auto;
+				text-align: center;
+			}
+			.markdown-body span.align-right {
+				display: block;
+				overflow: hidden;
+				clear: both;
+			}
+			.markdown-body span.align-right > span {
+				display: block;
+				margin: 13px 0 0;
+				overflow: hidden;
+				text-align: right;
+			}
+			.markdown-body span.align-right span img {
+				margin: 0;
+				text-align: right;
+			}
+			.markdown-body span.float-left {
+				display: block;
+				float: left;
+				margin-right: 13px;
+				overflow: hidden;
+			}
+			.markdown-body span.float-left span {
+				margin: 13px 0 0;
+			}
+			.markdown-body span.float-right {
+				display: block;
+				float: right;
+				margin-left: 13px;
+				overflow: hidden;
+			}
+			.markdown-body span.float-right > span {
+				display: block;
+				margin: 13px auto 0;
+				overflow: hidden;
+				text-align: right;
+			}
+			.markdown-body code,
+			.markdown-body tt {
+				padding: 0;
+				padding-top: 0.2em;
+				padding-bottom: 0.2em;
+				margin: 0;
+				font-size: 85%;
+				background-color: rgba(0, 0, 0, 0.04);
+				border-radius: 3px;
+			}
+			.markdown-body code:after,
+			.markdown-body code:before,
+			.markdown-body tt:after,
+			.markdown-body tt:before {
+				letter-spacing: -0.2em;
+				content: "\00a0";
+			}
+			.markdown-body code br,
+			.markdown-body tt br {
+				display: none;
+			}
+			.markdown-body del code {
+				text-decoration: inherit;
+			}
+			.markdown-body pre {
+				word-wrap: normal;
+			}
+			.markdown-body pre > code {
+				padding: 0;
+				margin: 0;
+				font-size: 100%;
+				word-break: normal;
+				white-space: pre;
+				background: transparent;
+				border: 0;
+			}
+			.markdown-body .highlight {
+				margin-bottom: 16px;
+			}
+			.markdown-body .highlight pre {
+				margin-bottom: 0;
+				word-break: normal;
+			}
+			.markdown-body .highlight pre,
+			.markdown-body pre {
+				padding: 16px;
+				overflow: auto;
+				font-size: 85%;
+				line-height: 1.45;
+				background-color: #f7f7f7;
+				border-radius: 3px;
+			}
+			.markdown-body pre code,
+			.markdown-body pre tt {
+				display: inline;
+				max-width: auto;
+				padding: 0;
+				margin: 0;
+				overflow: visible;
+				line-height: inherit;
+				word-wrap: normal;
+				background-color: transparent;
+				border: 0;
+			}
+			.markdown-body pre code:after,
+			.markdown-body pre code:before,
+			.markdown-body pre tt:after,
+			.markdown-body pre tt:before {
+				content: normal;
+			}
+			.markdown-body .csv-data td,
+			.markdown-body .csv-data th {
+				padding: 5px;
+				overflow: hidden;
+				font-size: 12px;
+				line-height: 1;
+				text-align: left;
+				white-space: nowrap;
+			}
+			.markdown-body .csv-data .blob-line-num {
+				padding: 10px 8px 9px;
+				text-align: right;
+				background: #fff;
+				border: 0;
+			}
+			.markdown-body .csv-data tr {
+				border-top: 0;
+			}
+			.markdown-body .csv-data th {
+				font-weight: 700;
+				background: #f8f8f8;
+				border-top: 0;
+			}
+			.news .alert .markdown-body blockquote {
+				padding: 0 0 0 40px;
+				border: 0 none;
+			}
+			.activity-tab .news .alert .commits,
+			.activity-tab .news .markdown-body blockquote {
+				padding-left: 0;
+			}
+			.task-list-item {
+				list-style-type: none;
+			}
+			.task-list-item label {
+				font-weight: 400;
+			}
+			.task-list-item.enabled label {
+				cursor: pointer;
+			}
+			.task-list-item + .task-list-item {
+				margin-top: 3px;
+			}
+			.task-list-item-checkbox {
+				float: left;
+				margin: 0.31em 0 0.2em -1.3em !important;
+				vertical-align: middle;
+				cursor: default !important;
+			}
+			.markdown-body {
+				padding-top: 40px;
+				padding-bottom: 40px;
+				max-width: 758px;
+				overflow: visible !important;
+				position: relative;
+			}
+			.markdown-body .emoji {
+				vertical-align: top;
+			}
+			.markdown-body pre {
+				border: inherit !important;
+			}
+			.markdown-body code {
+				color: inherit !important;
+			}
+			.markdown-body pre code .wrapper {
+				display: -moz-inline-flex;
+				display: -ms-inline-flex;
+				display: -o-inline-flex;
+				display: inline-flex;
+			}
+			.markdown-body pre code .gutter {
+				float: left;
+				overflow: hidden;
+				-webkit-user-select: none;
+				user-select: none;
+			}
+			.markdown-body pre code .gutter.linenumber {
+				text-align: right;
+				position: relative;
+				display: inline-block;
+				cursor: default;
+				z-index: 4;
+				padding: 0 8px 0 0;
+				min-width: 20px;
+				box-sizing: content-box;
+				color: #afafaf !important;
+				border-right: 3px solid #6ce26c !important;
+			}
+			.markdown-body pre code .gutter.linenumber > span:before {
+				content: attr(data-linenumber);
+			}
+			.markdown-body pre code .code {
+				float: left;
+				margin: 0 0 0 16px;
+			}
+			.markdown-body .gist .line-numbers {
+				border-left: none;
+				border-top: none;
+				border-bottom: none;
+			}
+			.markdown-body .gist .line-data {
+				border: none;
+			}
+			.markdown-body .gist table {
+				border-spacing: 0;
+				border-collapse: inherit !important;
+			}
+			.markdown-body code[data-gist-id] {
+				background: none;
+				padding: 0;
+			}
+			.markdown-body code[data-gist-id]:after,
+			.markdown-body code[data-gist-id]:before {
+				content: "";
+			}
+			.markdown-body code[data-gist-id] .blob-num {
+				border: unset;
+			}
+			.markdown-body code[data-gist-id] table {
+				overflow: unset;
+				margin-bottom: unset;
+			}
+			.markdown-body code[data-gist-id] table tr {
+				background: unset;
+			}
+			.markdown-body[dir="rtl"] pre {
+				direction: ltr;
+			}
+			.markdown-body[dir="rtl"] code {
+				direction: ltr;
+				unicode-bidi: embed;
+			}
+			.markdown-body .alert > p {
+				margin-bottom: 0;
+			}
+			.markdown-body pre.abc,
+			.markdown-body pre.flow-chart,
+			.markdown-body pre.graphviz,
+			.markdown-body pre.mermaid,
+			.markdown-body pre.sequence-diagram,
+			.markdown-body pre.vega {
+				text-align: center;
+				background-color: inherit;
+				border-radius: 0;
+				white-space: inherit;
+				overflow: visible;
+			}
+			.markdown-body pre.abc > code,
+			.markdown-body pre.flow-chart > code,
+			.markdown-body pre.graphviz > code,
+			.markdown-body pre.mermaid > code,
+			.markdown-body pre.sequence-diagram > code,
+			.markdown-body pre.vega > code {
+				text-align: left;
+			}
+			.markdown-body pre.abc > svg,
+			.markdown-body pre.flow-chart > svg,
+			.markdown-body pre.graphviz > svg,
+			.markdown-body pre.mermaid > svg,
+			.markdown-body pre.sequence-diagram > svg,
+			.markdown-body pre.vega > svg {
+				max-width: 100%;
+				height: 100%;
+			}
+			.markdown-body pre > code.wrap {
+				white-space: pre-wrap;
+				white-space: -moz-pre-wrap;
+				white-space: -pre-wrap;
+				white-space: -o-pre-wrap;
+				word-wrap: break-word;
+			}
+			.markdown-body .alert > p,
+			.markdown-body .alert > ul {
+				margin-bottom: 0;
+			}
+			.markdown-body summary {
+				display: list-item;
+			}
+			.markdown-body summary:focus {
+				outline: none;
+			}
+			.markdown-body details summary {
+				cursor: pointer;
+			}
+			.markdown-body details:not([open]) > :not(summary) {
+				display: none;
+			}
+			.markdown-body figure {
+				margin: 1em 40px;
+			}
+			.markdown-body .mark,
+			.markdown-body mark {
+				background-color: #fff1a7;
+			}
+			.vimeo,
+			.youtube {
+				cursor: pointer;
+				display: table;
+				text-align: center;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-color: #000;
+				overflow: hidden;
+			}
+			.vimeo,
+			.youtube {
+				position: relative;
+				width: 100%;
+			}
+			.youtube {
+				padding-bottom: 56.25%;
+			}
+			.vimeo img {
+				width: 100%;
+				object-fit: contain;
+				z-index: 0;
+			}
+			.youtube img {
+				object-fit: cover;
+				z-index: 0;
+			}
+			.vimeo iframe,
+			.youtube iframe,
+			.youtube img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.vimeo iframe,
+			.youtube iframe {
+				vertical-align: middle;
+				z-index: 1;
+			}
+			.vimeo .icon,
+			.youtube .icon {
+				position: absolute;
+				height: auto;
+				width: auto;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #fff;
+				opacity: 0.3;
+				transition: opacity 0.2s;
+				z-index: 0;
+			}
+			.vimeo:hover .icon,
+			.youtube:hover .icon {
+				opacity: 0.6;
+				transition: opacity 0.2s;
+			}
+			.slideshare .inner,
+			.speakerdeck .inner {
+				position: relative;
+				width: 100%;
+			}
+			.slideshare .inner iframe,
+			.speakerdeck .inner iframe {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.MJX_Assistive_MathML {
+				display: none;
+			}
+			#MathJax_Message {
+				z-index: 1000 !important;
+			}
+			.ui-infobar {
+				position: relative;
+				z-index: 2;
+				max-width: 760px;
+				margin: 25px auto -25px;
+				color: #777;
+			}
+			.toc .invisable-node {
+				list-style-type: none;
+			}
+			.ui-toc {
+				position: fixed;
+				bottom: 20px;
+				z-index: 998;
+			}
+			.ui-toc.both-mode {
+				margin-left: 8px;
+			}
+			.ui-toc.both-mode .ui-toc-label {
+				height: 40px;
+				padding: 10px 4px;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+			.ui-toc-label {
+				background-color: #e6e6e6;
+				border: none;
+				color: #868686;
+				transition: opacity 0.2s;
+			}
+			.ui-toc .open .ui-toc-label {
+				opacity: 1;
+				color: #fff;
+				transition: opacity 0.2s;
+			}
+			.ui-toc-label:focus {
+				opacity: 0.3;
+				background-color: #ccc;
+				color: #000;
+			}
+			.ui-toc-label:hover {
+				opacity: 1;
+				background-color: #ccc;
+				transition: opacity 0.2s;
+			}
+			.ui-toc-dropdown {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding-left: 10px;
+				padding-right: 10px;
+				max-width: 45vw;
+				width: 25vw;
+				max-height: 70vh;
+				overflow: auto;
+				text-align: inherit;
+			}
+			.ui-toc-dropdown > .toc {
+				max-height: calc(70vh - 100px);
+				overflow: auto;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav {
+				padding-right: 0;
+				letter-spacing: 0.0029em;
+			}
+			.ui-toc-dropdown a {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: pre;
+			}
+			.ui-toc-dropdown .nav > li > a {
+				display: block;
+				padding: 4px 20px;
+				font-size: 13px;
+				font-weight: 500;
+				color: #767676;
+			}
+			.ui-toc-dropdown .nav > li:first-child:last-child > ul,
+			.ui-toc-dropdown .toc.expand ul {
+				display: block;
+			}
+			.ui-toc-dropdown .nav > li > a:focus,
+			.ui-toc-dropdown .nav > li > a:hover {
+				padding-left: 19px;
+				color: #000;
+				text-decoration: none;
+				background-color: transparent;
+				border-left: 1px solid #000;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav > li > a:focus,
+			.ui-toc-dropdown[dir="rtl"] .nav > li > a:hover {
+				padding-right: 19px;
+				border-left: none;
+				border-right: 1px solid #000;
+			}
+			.ui-toc-dropdown .nav > .active:focus > a,
+			.ui-toc-dropdown .nav > .active:hover > a,
+			.ui-toc-dropdown .nav > .active > a {
+				padding-left: 18px;
+				font-weight: 700;
+				color: #000;
+				background-color: transparent;
+				border-left: 2px solid #000;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav > .active:focus > a,
+			.ui-toc-dropdown[dir="rtl"] .nav > .active:hover > a,
+			.ui-toc-dropdown[dir="rtl"] .nav > .active > a {
+				padding-right: 18px;
+				border-left: none;
+				border-right: 2px solid #000;
+			}
+			.ui-toc-dropdown .nav .nav {
+				display: none;
+				padding-bottom: 10px;
+			}
+			.ui-toc-dropdown .nav > .active > ul {
+				display: block;
+			}
+			.ui-toc-dropdown .nav .nav > li > a {
+				padding-top: 1px;
+				padding-bottom: 1px;
+				padding-left: 30px;
+				font-size: 12px;
+				font-weight: 400;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > a {
+				padding-right: 30px;
+			}
+			.ui-toc-dropdown .nav .nav > li > ul > li > a {
+				padding-top: 1px;
+				padding-bottom: 1px;
+				padding-left: 40px;
+				font-size: 12px;
+				font-weight: 400;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a {
+				padding-right: 40px;
+			}
+			.ui-toc-dropdown .nav .nav > li > a:focus,
+			.ui-toc-dropdown .nav .nav > li > a:hover {
+				padding-left: 29px;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > a:focus,
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > a:hover {
+				padding-right: 29px;
+			}
+			.ui-toc-dropdown .nav .nav > li > ul > li > a:focus,
+			.ui-toc-dropdown .nav .nav > li > ul > li > a:hover {
+				padding-left: 39px;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a:focus,
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a:hover {
+				padding-right: 39px;
+			}
+			.ui-toc-dropdown .nav .nav > .active:focus > a,
+			.ui-toc-dropdown .nav .nav > .active:hover > a,
+			.ui-toc-dropdown .nav .nav > .active > a {
+				padding-left: 28px;
+				font-weight: 500;
+			}
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > .active:focus > a,
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > .active:hover > a,
+			.ui-toc-dropdown[dir="rtl"] .nav .nav > .active > a {
+				padding-right: 28px;
+			}
+			.ui-toc-dropdown .nav .nav > .active > .nav > .active:focus > a,
+			.ui-toc-dropdown .nav .nav > .active > .nav > .active:hover > a,
+			.ui-toc-dropdown .nav .nav > .active > .nav > .active > a {
+				padding-left: 38px;
+				font-weight: 500;
+			}
+			.ui-toc-dropdown[dir="rtl"]
+				.nav
+				.nav
+				> .active
+				> .nav
+				> .active:focus
+				> a,
+			.ui-toc-dropdown[dir="rtl"]
+				.nav
+				.nav
+				> .active
+				> .nav
+				> .active:hover
+				> a,
+			.ui-toc-dropdown[dir="rtl"]
+				.nav
+				.nav
+				> .active
+				> .nav
+				> .active
+				> a {
+				padding-right: 38px;
+			}
+			.markdown-body {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+			}
+			html[lang^="ja"] .markdown-body {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial,
+					Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, Osaka, Meiryo,
+					メイリオ, MS Gothic, ＭＳ\ゴシック, sans-serif;
+			}
+			html[lang="zh-tw"] .markdown-body {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial, PingFang TC,
+					Microsoft JhengHei, 微軟正黑, sans-serif;
+			}
+			html[lang="zh-cn"] .markdown-body {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial, PingFang SC,
+					Microsoft YaHei, 微软雅黑, sans-serif;
+			}
+			html .markdown-body[lang^="ja"] {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial,
+					Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, Osaka, Meiryo,
+					メイリオ, MS Gothic, ＭＳ\ゴシック, sans-serif;
+			}
+			html .markdown-body[lang="zh-tw"] {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial, PingFang TC,
+					Microsoft JhengHei, 微軟正黑, sans-serif;
+			}
+			html .markdown-body[lang="zh-cn"] {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+					Helvetica Neue, Helvetica, Roboto, Arial, PingFang SC,
+					Microsoft YaHei, 微软雅黑, sans-serif;
+			}
+			html[lang^="ja"] .ui-toc-dropdown {
+				font-family: Source Sans Pro, Helvetica, Arial, Meiryo UI,
+					MS PGothic, ＭＳ\Ｐゴシック, sans-serif;
+			}
+			html[lang="zh-tw"] .ui-toc-dropdown {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Microsoft JhengHei UI, 微軟正黑UI, sans-serif;
+			}
+			html[lang="zh-cn"] .ui-toc-dropdown {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Microsoft YaHei UI, 微软雅黑UI, sans-serif;
+			}
+			html .ui-toc-dropdown[lang^="ja"] {
+				font-family: Source Sans Pro, Helvetica, Arial, Meiryo UI,
+					MS PGothic, ＭＳ\Ｐゴシック, sans-serif;
+			}
+			html .ui-toc-dropdown[lang="zh-tw"] {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Microsoft JhengHei UI, 微軟正黑UI, sans-serif;
+			}
+			html .ui-toc-dropdown[lang="zh-cn"] {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Microsoft YaHei UI, 微软雅黑UI, sans-serif;
+			}
+			.ui-affix-toc {
+				position: fixed;
+				top: 0;
+				max-width: 15vw;
+				max-height: 70vh;
+				overflow: auto;
+			}
+			.back-to-top,
+			.expand-toggle,
+			.go-to-bottom {
+				display: block;
+				padding: 4px 10px;
+				margin-top: 10px;
+				margin-left: 10px;
+				font-size: 12px;
+				font-weight: 500;
+				color: #999;
+			}
+			.back-to-top:focus,
+			.back-to-top:hover,
+			.expand-toggle:focus,
+			.expand-toggle:hover,
+			.go-to-bottom:focus,
+			.go-to-bottom:hover {
+				color: #563d7c;
+				text-decoration: none;
+			}
+			.back-to-top,
+			.go-to-bottom {
+				margin-top: 0;
+			}
+			.ui-user-icon {
+				width: 20px;
+				height: 20px;
+				display: block;
+				border-radius: 50%;
+				margin-top: 2px;
+				margin-bottom: 2px;
+				margin-right: 5px;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.ui-user-icon.small {
+				width: 18px;
+				height: 18px;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 0 0.2em;
+			}
+			.ui-infobar > small > span {
+				line-height: 22px;
+			}
+			.ui-infobar > small .dropdown {
+				display: inline-block;
+			}
+			.ui-infobar > small .dropdown a:focus,
+			.ui-infobar > small .dropdown a:hover {
+				text-decoration: none;
+			}
+			.ui-more-info {
+				color: #888;
+				cursor: pointer;
+				vertical-align: middle;
+			}
+			.ui-more-info .fa {
+				font-size: 16px;
+			}
+			.ui-connectedGithub,
+			.ui-published-note {
+				color: #888;
+			}
+			.ui-connectedGithub {
+				line-height: 23px;
+				white-space: nowrap;
+			}
+			.ui-connectedGithub a.file-path {
+				color: #888;
+				text-decoration: none;
+				padding-left: 22px;
+			}
+			.ui-connectedGithub a.file-path:active,
+			.ui-connectedGithub a.file-path:hover {
+				color: #888;
+				text-decoration: underline;
+			}
+			.ui-connectedGithub .fa {
+				font-size: 20px;
+			}
+			.ui-published-note .fa {
+				font-size: 20px;
+				vertical-align: top;
+			}
+			.unselectable {
+				-webkit-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			.selectable {
+				-webkit-user-select: text;
+				-o-user-select: text;
+				user-select: text;
+			}
+			@media print {
+				blockquote,
+				div,
+				img,
+				pre,
+				table {
+					page-break-inside: avoid !important;
+				}
+				a[href]:after {
+					font-size: 12px !important;
+				}
+			}
+			.markdown-body.slides {
+				position: relative;
+				z-index: 1;
+				color: #222;
+			}
+			.markdown-body.slides:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				background-color: currentColor;
+				box-shadow: 0 0 0 50vw;
+			}
+			.markdown-body.slides section[data-markdown] {
+				position: relative;
+				margin-bottom: 1.5em;
+				background-color: #fff;
+				text-align: center;
+			}
+			.markdown-body.slides section[data-markdown] code {
+				text-align: left;
+			}
+			.markdown-body.slides section[data-markdown]:before {
+				content: "";
+				display: block;
+				padding-bottom: 56.23%;
+			}
+			.markdown-body.slides section[data-markdown] > div:first-child {
+				position: absolute;
+				top: 50%;
+				left: 1em;
+				right: 1em;
+				transform: translateY(-50%);
+				max-height: 100%;
+				overflow: hidden;
+			}
+			.markdown-body.slides section[data-markdown] > ul {
+				display: inline-block;
+			}
+			.markdown-body.slides > section > section + section:after {
+				content: "";
+				position: absolute;
+				top: -1.5em;
+				right: 1em;
+				height: 1.5em;
+				border: 3px solid #777;
+			}
+			.site-ui-font {
+				font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+			}
+			html[lang^="ja"] .site-ui-font {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, Osaka, Meiryo,
+					メイリオ, MS Gothic, ＭＳ\ゴシック, sans-serif;
+			}
+			html[lang="zh-tw"] .site-ui-font {
+				font-family: Source Sans Pro, Helvetica, Arial, PingFang TC,
+					Microsoft JhengHei, 微軟正黑, sans-serif;
+			}
+			html[lang="zh-cn"] .site-ui-font {
+				font-family: Source Sans Pro, Helvetica, Arial, PingFang SC,
+					Microsoft YaHei, 微软雅黑, sans-serif;
+			}
+			body {
+				font-smoothing: subpixel-antialiased !important;
+				-webkit-font-smoothing: subpixel-antialiased !important;
+				-moz-osx-font-smoothing: auto !important;
+				text-shadow: 0 0 1em transparent,
+					1px 1px 1.2px rgba(0, 0, 0, 0.004);
+				-webkit-overflow-scrolling: touch;
+				letter-spacing: 0.025em;
+				font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+			}
+			html[lang^="ja"] body {
+				font-family: Source Sans Pro, Helvetica, Arial,
+					Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, Osaka, Meiryo,
+					メイリオ, MS Gothic, ＭＳ\ゴシック, sans-serif;
+			}
+			html[lang="zh-tw"] body {
+				font-family: Source Sans Pro, Helvetica, Arial, PingFang TC,
+					Microsoft JhengHei, 微軟正黑, sans-serif;
+			}
+			html[lang="zh-cn"] body {
+				font-family: Source Sans Pro, Helvetica, Arial, PingFang SC,
+					Microsoft YaHei, 微软雅黑, sans-serif;
+			}
+			abbr[title] {
+				border-bottom: none;
+				text-decoration: underline;
+				-webkit-text-decoration: underline dotted;
+				text-decoration: underline dotted;
+			}
+			abbr[data-original-title],
+			abbr[title] {
+				cursor: help;
+			}
+			body.modal-open {
+				overflow-y: auto;
+				padding-right: 0 !important;
+			}
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+				integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g="
+				crossorigin="anonymous"
+			></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+				integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE="
+				crossorigin="anonymous"
+			></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"
+				integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo="
+				crossorigin="anonymous"
+			></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div
+			id="doc"
+			class="markdown-body container-fluid comment-enabled"
+			data-hard-breaks="true"
+		>
+			<h1 id="Karai-Is-Born" data-id="Karai-Is-Born">
+				<a
+					class="anchor hidden-xs"
+					href="#Karai-Is-Born"
+					title="Karai-Is-Born"
+					><span class="octicon octicon-link"></span></a
+				><span>Karai Is Born</span>
+			</h1>
+			<img
+				src="https://user-images.githubusercontent.com/34389545/96316159-1c775c80-0fd4-11eb-901c-0242de64b1ba.png"
+			/>
+			<p>
+				<em
+					><span
+						>Not that I’d accuse anybody of paying attention, but
+						quietly Karai Coordinator has been reaching 1.0.0 and I
+						thought, “Where is that guy who writes the dev updates?”
+						only to realize, “Oh shit, that’s me…”</span
+					></em
+				>
+			</p>
+			<h2 id="What-is-Karai-again" data-id="What-is-Karai-again">
+				<a
+					class="anchor hidden-xs"
+					href="#What-is-Karai-again"
+					title="What-is-Karai-again"
+					><span class="octicon octicon-link"></span></a
+				><span>What is Karai, again?</span>
+			</h2>
+			<p>
+				<span
+					>Karai began as a promise to bring private smart contracts
+					to TRTL. I can elaborate some other time about why it didn’t
+					become smart contracts, but the gist of it is, Karai is a
+					scaling tool that can be attached to any blockchain to form
+					sidechain-like feeds of cryptographically linked events that
+					can “check in” their state on any cryptocurrency
+					blockchain.</span
+				>
+			</p>
+			<h5
+				id="What-does-this-have-to-do-with-TurtleCoin"
+				data-id="What-does-this-have-to-do-with-TurtleCoin"
+			>
+				<a
+					class="anchor hidden-xs"
+					href="#What-does-this-have-to-do-with-TurtleCoin"
+					title="What-does-this-have-to-do-with-TurtleCoin"
+					><span class="octicon octicon-link"></span></a
+				><span>What does this have to do with TurtleCoin?</span>
+			</h5>
+			<p>
+				<span
+					>Karai is not a cryptocurrency and has no native coin/token,
+					and in order to prove that this thing works, it made sense
+					to embed TRTL functions natively inside of Karai.</span
+				>
+			</p>
+			<h2 id="A-tale-of-two-repos" data-id="A-tale-of-two-repos">
+				<a
+					class="anchor hidden-xs"
+					href="#A-tale-of-two-repos"
+					title="A-tale-of-two-repos"
+					><span class="octicon octicon-link"></span></a
+				><span>A tale of two repos</span>
+			</h2>
+			<p>
+				<span
+					>In the past, Karai shipped as a single app that had
+					coordinator functions as well as client functions in the
+					same app. As time went on it made more sense for them to
+					both exist separately. Things continued a little bit further
+					and I started to like the idea of keeping them apart.</span
+				>
+			</p>
+			<p>
+				<a
+					href="https://github.com/karai/coordinator"
+					target="_blank"
+					rel="noopener"
+					><span>Karai Coordinator</span></a
+				><span>
+					is needed to create your channel, and must be running to
+					process transactions. Coordinator acts as a centralized time
+					stamping authority that assembles the graph of transactions.
+					It also handles connections to the graph, with each user
+					generating their own certificate to manage access.</span
+				>
+			</p>
+			<p>
+				<a
+					href="https://github.com/karai/client"
+					target="_blank"
+					rel="noopener"
+					><span>Karai Reference Client</span></a
+				><span>
+					is not so much a production app but more of a tool to test
+					the functions on the coordinator, and for prospective app
+					developers to see how you can interact with a coordinator.
+					Incidentally, the reference client started out as an attempt
+					to use libkarai-go which is the Karai library for Golang,
+					however I kept iterating the development of it and
+					eventually had replaced the library code and so now it
+					functions as its own native client. shrug.</span
+				>
+			</p>
+			<h2 id="Libraries" data-id="Libraries">
+				<a class="anchor hidden-xs" href="#Libraries" title="Libraries"
+					><span class="octicon octicon-link"></span></a
+				><span>Libraries</span>
+			</h2>
+			<ul>
+				<li>
+					<strong><span>libkarai-go</span></strong
+					><br />
+					<span
+						>This library might work, and it might not. I refactored
+						it mid way through writing the reference client, so as
+						far as I can remember it </span
+					><em><span>should</span></em
+					><span>
+						work, but I cant say that without squinting a little bit
+						and wiggling my hand in a </span
+					><em><span>maaaaybeee</span></em
+					><span>
+						kind of way. If it does not work, or if it gives
+						inconsistent results, make an issue on Github and I will
+						fix it.</span
+					>
+				</li>
+				<li>
+					<strong><span>libkarai-js</span></strong
+					><br />
+					<span
+						>This almost certainly will not work. It has not been
+						touched in quite some time.</span
+					>
+				</li>
+				<li>
+					<strong><span>libkarai-rs</span></strong
+					><br />
+					<span
+						>A friend who writes Rust code said he would port the
+						library, however I havent bugged him in a while about it
+						(madk if youre reading this, this is you)</span
+					>
+				</li>
+				<li>
+					<strong><span>Other languages</span></strong
+					><br />
+					<span
+						>I go through phases of wanting to learn other languages
+						for the purposes of writing libkarai in that language.
+						This seems to quickly reach a barrier though, in that I
+						have no idea which languages would be the most useful to
+						write a library in, and also, none of the languages I
+						want to learn are very popular at all. Some candidates
+						are/were Crystal, V lang, Nim, LISP.</span
+					>
+				</li>
+			</ul>
+			<h2 id="What-is-next" data-id="What-is-next">
+				<a
+					class="anchor hidden-xs"
+					href="#What-is-next"
+					title="What-is-next"
+					><span class="octicon octicon-link"></span></a
+				><span>What is next?</span>
+			</h2>
+			<p>
+				<span
+					>I ask myself a lot, “what’s all this for?”. Obviously
+					nobody wanders around the Bitcoin circles saying “you know
+					what this needs? Karai.” and they probably won’t… until I
+					build a proof of concept that brings people in.</span
+				>
+			</p>
+			<p>
+				<span
+					>Last week I had the chance to do a 3 day weekend hackathon
+					while the house was empty, and just for shits and giggles
+					built a proof of stake cryptocurrency that runs on top of
+					Karai. It has a daemon, wallet, api, post-quantum hashing
+					algo, all the cool stuff an aspiring shitcoin artist would
+					want. It was just a proof that it could be done, barring the
+					invention of a ERC20 standard for TRTL, it will just sit in
+					a private repo, but the fact remains, Karai has
+					potential.</span
+				>
+			</p>
+			<h5 id="What-does-this-mean" data-id="What-does-this-mean">
+				<a
+					class="anchor hidden-xs"
+					href="#What-does-this-mean"
+					title="What-does-this-mean"
+					><span class="octicon octicon-link"></span></a
+				><span>What does this mean?</span>
+			</h5>
+			<p>
+				<span
+					>Nobody knows. It would be safe to say if you wanted to
+					build a cryptocurrency today or a lightning fast scaling
+					component to an existing network today, Karai is a ready
+					made choice. If you wanted to take a privacy network like
+					TurtleCoin, Monero, or ByteCoin and wanted lock some coins
+					up and issue a non fungible token and create CryptoTurtles,
+					theres nothing stopping you. Do I hope that Karai wont only
+					be used to spawn more shitcoins? Only time may tell…</span
+				>
+			</p>
+			<h2 id="Some-ideas-for-now…" data-id="Some-ideas-for-now…">
+				<a
+					class="anchor hidden-xs"
+					href="#Some-ideas-for-now…"
+					title="Some-ideas-for-now…"
+					><span class="octicon octicon-link"></span></a
+				><span>Some ideas for now…</span>
+			</h2>
+			<p>
+				<span
+					>As Karai is starting to reach a stable state, here are some
+					new things that will be occupying my nights &amp;
+					weekends:</span
+				>
+			</p>
+			<ul>
+				<li>
+					<span
+						>better integration with TRTL Daemon + Wallet API
+						(urgent)</span
+					>
+				</li>
+				<li><span>karai-client browser plugin (nice to have)</span></li>
+				<li>
+					<span
+						>TRTL as a staked asset for nonfungible token
+						(cryptoturtles is cool, but not essential)</span
+					>
+				</li>
+				<li><span>visualizing subgraphs</span></li>
+			</ul>
+			<h2 id="Some-recent-changes" data-id="Some-recent-changes">
+				<a
+					class="anchor hidden-xs"
+					href="#Some-recent-changes"
+					title="Some-recent-changes"
+					><span class="octicon octicon-link"></span></a
+				><span>Some recent changes</span>
+			</h2>
+			<p>
+				<span
+					>If you think of TRTL or Bitcoin as a “blockchain” where
+					there is a singlefile dotted line of blocks one after the
+					other, Karai would be like a fractal web of transactions
+					unconstrained by blocks. Karai has a graph, where TurtleCoin
+					has a blockchain.</span
+				>
+			</p>
+			<p>
+				<span
+					>In the past, Karai has used the passing of time to store
+					smaller graphs in big batches on the main graph, so as time
+					moved forward Karai would pile transactions all into a
+					subgraph, then wait for a lull in activity before creating a
+					new subgraph. Recently this changed in a way that I think
+					makes more sense.</span
+				>
+			</p>
+			<p>
+				<span
+					>The issue with lumping all transactions in a given time
+					period into batches is that we are basically creating
+					blocks, in a chain, effectively replacing our surroundings
+					with where we came from; since the whole reason why we went
+					with a DAG was to be more efficient, this felt backwards
+					when we were able to visualize the data and watch it work.
+					Scanning these blobs for what might be your transaction
+					didnt seem like it would be a treat either.</span
+				>
+			</p>
+			<p>
+				<span
+					>Subgraphs 2.0 brought a new concept, borrowed from
+					Nano/Raiblocks, where each user spawns their own subgraph,
+					greatly reducing scan time for ingesting your own
+					transactions, and with an added bonus of spam being a direct
+					hinderance on the person creating it.</span
+				>
+			</p>
+			<h5
+				id="How-does-Subgraphs-20-fight-spam"
+				data-id="How-does-Subgraphs-20-fight-spam"
+			>
+				<a
+					class="anchor hidden-xs"
+					href="#How-does-Subgraphs-20-fight-spam"
+					title="How-does-Subgraphs-20-fight-spam"
+					><span class="octicon octicon-link"></span></a
+				><span>How does Subgraphs 2.0 fight spam?</span>
+			</h5>
+			<p>
+				<span
+					>In SG1, when a user would add a transaction, it could be
+					lumped with other transactions from other users before being
+					arranged into a subgraph. The scan speed was shortened by
+					using the first TX in a subgraph to store metadata about
+					which users/pubkeys were present in the blocks descending
+					from it.</span
+				>
+			</p>
+			<p>
+				<span
+					>On the whiteboard, this seemed like a great idea. In
+					practice, however, comingling users into the same subgraphs
+					made it tough because youd still be ingesting the entire
+					subgraph and scanning for your transaction, it was difficult
+					to segment the network in a way that made sense when you get
+					paired up with a noisy neighbor.</span
+				>
+			</p>
+			<p>
+				<span
+					>In SG2, each user has their own subgraph that begins with
+					the first transaction they send. Each transaction they send
+					after directly follows their last transaction, so spamming
+					transactions over and over only affects yourself, as when
+					you join youre now fetching a subgraph based on your pubkey,
+					and are only charged with scanning outside of your own
+					subgraph when verifying the entire lineage of the entire
+					graph, which is basically never. Instead of a blockchain, we
+					now have a multifaceted helix, a strand of graphs/chains all
+					flowing in parallel and tied at the end.</span
+				>
+			</p>
+			<h2 id="Give-it-a-shot" data-id="Give-it-a-shot">
+				<a
+					class="anchor hidden-xs"
+					href="#Give-it-a-shot"
+					title="Give-it-a-shot"
+					><span class="octicon octicon-link"></span></a
+				><span>Give it a shot</span>
+			</h2>
+			<p>
+				<span
+					>SG2 is live now, there are still some improvements that can
+					be made, but in the mean time give it a shot. There are two
+					staging networks. Ironically the one marked stable is least
+					stable and operates on an outdated codebase still running
+					SG1 if it is still running.</span
+				>
+			</p>
+			<p>
+				<span>Karai Explorer - </span
+				><a
+					href="https://karai.io/explore"
+					target="_blank"
+					rel="noopener"
+					><span>https://karai.io/explore</span></a
+				><br />
+				<span>Icarus (Unstable) - </span
+				><a
+					href="http://167.71.104.172:4200/api/v1/stats"
+					target="_blank"
+					rel="noopener"
+					><span>http://167.71.104.172:4200/api/v1/stats</span></a
+				><br />
+				<span>Daedalus (Stable) - </span
+				><a
+					href="http://46.101.200.220:4200/api/v1/stats"
+					target="_blank"
+					rel="noopener"
+					><span>http://46.101.200.220:4200/api/v1/stats</span></a
+				>
+			</p>
+			<p>
+				<em
+					><span
+						>Small note for developers: Please make an issue before
+						contributing a PR. The code in the Github repos is not
+						the active development tip, development happens offsite
+						on another Git service and gets dragged over to Github
+						periodically.</span
+					></em
+				>
+			</p>
+		</div>
+		<div
+			class="ui-toc dropup unselectable hidden-print"
+			style="display: none"
+		>
+			<div class="pull-right dropdown">
+				<a
+					id="tocLabel"
+					class="ui-toc-label btn btn-default"
+					data-toggle="dropdown"
+					href="#"
+					role="button"
+					aria-haspopup="true"
+					aria-expanded="false"
+					title="Table of content"
+				>
+					<i class="fa fa-bars"></i>
+				</a>
+				<ul
+					id="ui-toc"
+					class="ui-toc-dropdown dropdown-menu"
+					aria-labelledby="tocLabel"
+				>
+					<div class="toc">
+						<ul class="nav">
+							<li class="">
+								<a href="#Karai-Is-Born" title="Karai Is Born"
+									>Karai Is Born</a
+								>
+								<ul class="nav">
+									<li class="">
+										<a
+											href="#What-is-Karai-again"
+											title="What is Karai, again?"
+											>What is Karai, again?</a
+										>
+										<ul class="nav">
+											<li class="">
+												<a
+													href="#What-does-this-have-to-do-with-TurtleCoin"
+													title="What does this have to do with TurtleCoin?"
+													>What does this have to do
+													with TurtleCoin?</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a
+											href="#A-tale-of-two-repos"
+											title="A tale of two repos"
+											>A tale of two repos</a
+										>
+									</li>
+									<li class="">
+										<a href="#Libraries" title="Libraries"
+											>Libraries</a
+										>
+									</li>
+									<li>
+										<a
+											href="#What-is-next"
+											title="What is next?"
+											>What is next?</a
+										>
+										<ul class="nav">
+											<li>
+												<a
+													href="#What-does-this-mean"
+													title="What does this mean?"
+													>What does this mean?</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a
+											href="#Some-ideas-for-now…"
+											title="Some ideas for now…"
+											>Some ideas for now…</a
+										>
+									</li>
+									<li>
+										<a
+											href="#Some-recent-changes"
+											title="Some recent changes"
+											>Some recent changes</a
+										>
+										<ul class="nav">
+											<li>
+												<a
+													href="#How-does-Subgraphs-20-fight-spam"
+													title="How does Subgraphs 2.0 fight spam?"
+													>How does Subgraphs 2.0
+													fight spam?</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li class="">
+										<a
+											href="#Give-it-a-shot"
+											title="Give it a shot"
+											>Give it a shot</a
+										>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="toc-menu">
+						<a class="expand-toggle" href="#">Expand all</a
+						><a class="back-to-top" href="#">Back to top</a
+						><a class="go-to-bottom" href="#">Go to bottom</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+		<div
+			id="ui-toc-affix"
+			class="ui-affix-toc ui-toc-dropdown unselectable hidden-print"
+			data-spy="affix"
+			style="top: 17px; display: none"
+			null
+			null
+		>
+			<div class="toc">
+				<ul class="nav">
+					<li class="">
+						<a href="#Karai-Is-Born" title="Karai Is Born"
+							>Karai Is Born</a
+						>
+						<ul class="nav">
+							<li class="">
+								<a
+									href="#What-is-Karai-again"
+									title="What is Karai, again?"
+									>What is Karai, again?</a
+								>
+								<ul class="nav">
+									<li class="">
+										<a
+											href="#What-does-this-have-to-do-with-TurtleCoin"
+											title="What does this have to do with TurtleCoin?"
+											>What does this have to do with
+											TurtleCoin?</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="">
+								<a
+									href="#A-tale-of-two-repos"
+									title="A tale of two repos"
+									>A tale of two repos</a
+								>
+							</li>
+							<li class="">
+								<a href="#Libraries" title="Libraries"
+									>Libraries</a
+								>
+							</li>
+							<li>
+								<a href="#What-is-next" title="What is next?"
+									>What is next?</a
+								>
+								<ul class="nav">
+									<li>
+										<a
+											href="#What-does-this-mean"
+											title="What does this mean?"
+											>What does this mean?</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a
+									href="#Some-ideas-for-now…"
+									title="Some ideas for now…"
+									>Some ideas for now…</a
+								>
+							</li>
+							<li>
+								<a
+									href="#Some-recent-changes"
+									title="Some recent changes"
+									>Some recent changes</a
+								>
+								<ul class="nav">
+									<li>
+										<a
+											href="#How-does-Subgraphs-20-fight-spam"
+											title="How does Subgraphs 2.0 fight spam?"
+											>How does Subgraphs 2.0 fight
+											spam?</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="#Give-it-a-shot" title="Give it a shot"
+									>Give it a shot</a
+								>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="toc-menu">
+				<a class="expand-toggle" href="#">Expand all</a
+				><a class="back-to-top" href="#">Back to top</a
+				><a class="go-to-bottom" href="#">Go to bottom</a>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
+			integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script>
+			var markdown = $(".markdown-body");
+			//smooth all hash trigger scrolling
+			function smoothHashScroll() {
+				var hashElements = $("a[href^='#']").toArray();
+				for (var i = 0; i < hashElements.length; i++) {
+					var element = hashElements[i];
+					var $element = $(element);
+					var hash = element.hash;
+					if (hash) {
+						$element.on("click", function (e) {
+							// store hash
+							var hash = this.hash;
+							if ($(hash).length <= 0) return;
+							// prevent default anchor click behavior
+							e.preventDefault();
+							// animate
+							$("body, html")
+								.stop(true, true)
+								.animate(
+									{
+										scrollTop: $(hash).offset().top,
+									},
+									100,
+									"linear",
+									function () {
+										// when done, add hash to url
+										// (default click behaviour)
+										window.location.hash = hash;
+									}
+								);
+						});
+					}
+				}
+			}
+
+			smoothHashScroll();
+			var toc = $(".ui-toc");
+			var tocAffix = $(".ui-affix-toc");
+			var tocDropdown = $(".ui-toc-dropdown");
+			//toc
+			tocDropdown.click(function (e) {
+				e.stopPropagation();
+			});
+
+			var enoughForAffixToc = true;
+
+			function generateScrollspy() {
+				$(document.body).scrollspy({
+					target: "",
+				});
+				$(document.body).scrollspy("refresh");
+				if (enoughForAffixToc) {
+					toc.hide();
+					tocAffix.show();
+				} else {
+					tocAffix.hide();
+					toc.show();
+				}
+				$(document.body).scroll();
+			}
+
+			function windowResize() {
+				//toc right
+				var paddingRight = parseFloat(markdown.css("padding-right"));
+				var right =
+					$(window).width() -
+					(markdown.offset().left +
+						markdown.outerWidth() -
+						paddingRight);
+				toc.css("right", right + "px");
+				//affix toc left
+				var newbool;
+				var rightMargin =
+					(markdown.parent().outerWidth() - markdown.outerWidth()) /
+					2;
+				//for ipad or wider device
+				if (rightMargin >= 133) {
+					newbool = true;
+					var affixLeftMargin =
+						(tocAffix.outerWidth() - tocAffix.width()) / 2;
+					var left =
+						markdown.offset().left +
+						markdown.outerWidth() -
+						affixLeftMargin;
+					tocAffix.css("left", left + "px");
+				} else {
+					newbool = false;
+				}
+				if (newbool != enoughForAffixToc) {
+					enoughForAffixToc = newbool;
+					generateScrollspy();
+				}
+			}
+			$(window).resize(function () {
+				windowResize();
+			});
+			$(document).ready(function () {
+				windowResize();
+				generateScrollspy();
+			});
+
+			//remove hash
+			function removeHash() {
+				window.location.hash = "";
+			}
+
+			var backtotop = $(".back-to-top");
+			var gotobottom = $(".go-to-bottom");
+
+			backtotop.click(function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				if (scrollToTop) scrollToTop();
+				removeHash();
+			});
+			gotobottom.click(function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				if (scrollToBottom) scrollToBottom();
+				removeHash();
+			});
+
+			var toggle = $(".expand-toggle");
+			var tocExpand = false;
+
+			checkExpandToggle();
+			toggle.click(function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				tocExpand = !tocExpand;
+				checkExpandToggle();
+			});
+
+			function checkExpandToggle() {
+				var toc = $(".ui-toc-dropdown .toc");
+				var toggle = $(".expand-toggle");
+				if (!tocExpand) {
+					toc.removeClass("expand");
+					toggle.text("Expand all");
+				} else {
+					toc.addClass("expand");
+					toggle.text("Collapse all");
+				}
+			}
+
+			function scrollToTop() {
+				$("body, html").stop(true, true).animate(
+					{
+						scrollTop: 0,
+					},
+					100,
+					"linear"
+				);
+			}
+
+			function scrollToBottom() {
+				$("body, html")
+					.stop(true, true)
+					.animate(
+						{
+							scrollTop: $(document.body)[0].scrollHeight,
+						},
+						100,
+						"linear"
+					);
+			}
+		</script>
+	</body>
+</html>
